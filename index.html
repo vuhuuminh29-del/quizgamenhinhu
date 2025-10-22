@@ -122,22 +122,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   // --- Descriptions for 16 types (short,long,careers) ---
   const DESCRIPTIONS = {
-    "INTJ":{"short":"Chiến lược gia độc lập.","long":"INTJ lập kế hoạch, phân tích hệ thống, thích làm việc độc lập.","careers":["Kỹ sư phần mềm","Nhà phân tích dữ liệu","Nhà khoa học","Quản lý sản phẩm"]},
-    "INTP":{"short":"Nhà tư tưởng phân tích.","long":"INPT quan tâm lý thuyết, mô hình trừu tượng, giải thích nguyên lý.","careers":["Nhà nghiên cứu","Lập trình viên","Giảng viên"]},
-    "ENTJ":{"short":"Lãnh đạo quyết đoán.","long":"ENTJ thiên về lập chiến lược, quản lý, ra quyết định.","careers":["CEO","Quản lý dự án","Tư vấn"]},
-    "ENTP":{"short":"Sáng tạo, thích đổi mới.","long":"ENTP thích ý tưởng mới, tranh luận để mài giũa quan điểm.","careers":["Khởi nghiệp","Marketing","Tư vấn sáng tạo"]},
-    "INFJ":{"short":"Hướng nội, giàu giá trị.","long":"INFJ quan tâm ý nghĩa, giúp người khác phát triển.","careers":["Tư vấn tâm lý","Nhà văn","Giáo viên"]},
-    "INFP":{"short":"Lý tưởng, giàu nội tâm.","long":"INFP sống theo giá trị cá nhân, sáng tạo.","careers":["Nhà văn","Thiết kế","Nghệ sĩ"]},
-    "ENFJ":{"short":"Truyền cảm hứng, hỗ trợ cộng đồng.","long":"ENFJ giỏi kết nối, lãnh đạo vì con người.","careers":["Giáo dục","Nhân sự","Tư vấn"]},
-    "ENFP":{"short":"Nhiệt huyết, sáng tạo.","long":"ENFP nhiều năng lượng, thích khám phá cơ hội.","careers":["Marketing","PR","Sáng tạo nội dung"]},
-    "ISTJ":{"short":"Trách nhiệm, thực tế.","long":"ISTJ tuân thủ quy tắc, làm việc có cấu trúc.","careers":["Kế toán","Hành chính","Quản lý vận hành"]},
-    "ISFJ":{"short":"Chu đáo, tận tâm.","long":"ISFJ chăm sóc người khác, chú ý chi tiết.","careers":["Y tá","Giáo viên","Dịch vụ khách hàng"]},
-    "ESTJ":{"short":"Tổ chức, quyết đoán.","long":"ESTJ giỏi tổ chức, thi hành quy trình.","careers":["Quản lý","Giám sát","Nhân sự"]},
-    "ESFJ":{"short":"Quan tâm cộng đồng.","long":"ESFJ chu đáo, giỏi giao tiếp, hỗ trợ tập thể.","careers":["Giáo dục","Quản lý sự kiện","Chăm sóc khách hàng"]},
-    "ISTP":{"short":"Thực hành, phân tích.","long":"ISTP thích khám phá vận hành của mọi thứ, giải quyết thực tế.","careers":["Kỹ thuật","Lập trình hệ thống","Thợ kỹ thuật"]},
-    "ISFP":{"short":"Nghệ sĩ, nhạy cảm.","long":"ISFP sáng tạo, có con mắt thẩm mỹ, sống trong hiện tại.","careers":["Thiết kế","Nhiếp ảnh","Nghệ thuật"]},
-    "ESTP":{"short":"Năng động, ưa mạo hiểm.","long":"ESTP hành động nhanh, thích thử thách, xử lý khủng hoảng.","careers":["Kinh doanh","Sự kiện","Bán hàng"]},
-    "ESFP":{"short":"Biểu diễn, thân thiện.","long":"ESFP thích giao tiếp, tạo niềm vui cho người khác.","careers":["Nghệ sĩ","Du lịch & Khách sạn","PR/Marketing"]}
+    "INTJ":{"short":"Chiến lược gia độc lập.","long":"INTJ lập kế hoạch, phân tích hệ thống, thích làm việc độc lập.","careers":["Làm độc lập","Yêu cầu trí tuệ","Có khả năng kiểm soát hướng đi"]},
+    "INTP":{"short":"Nhà tư tưởng phân tích.","long":"INPT quan tâm lý thuyết, mô hình trừu tượng, giải thích nguyên lý.","careers":["Môi trường linh hoạt","Cho phép suy nghĩ tự do","Không ràng buộc cứng"]},
+    "ENTJ":{"short":"Lãnh đạo quyết đoán.","long":"ENTJ thiên về lập chiến lược, quản lý, ra quyết định.","careers":["Môi trường cạnh tranh","Cơ hội thăng tiến","Mang tầm ảnh hưởng lớn"]},
+    "ENTP":{"short":"Sáng tạo, thích đổi mới.","long":"ENTP thích ý tưởng mới, tranh luận để mài giũa quan điểm.","careers":["Đề cao sự sáng tạo","Thử nghiệm","Không gò bó quy tắc"]},
+    "INFJ":{"short":"Hướng nội, giàu giá trị.","long":"INFJ quan tâm ý nghĩa, giúp người khác phát triển.","careers":["Có ý nghĩa","Giúp đời","Hướng đến tầm nhìn dài hạn"]},
+    "INFP":{"short":"Lý tưởng, giàu nội tâm.","long":"INFP sống theo giá trị cá nhân, sáng tạo.","careers":["Không gian tự do","Cảm xúc được tôn trọng"]},
+    "ENFJ":{"short":"Truyền cảm hứng, hỗ trợ cộng đồng.","long":"ENFJ giỏi kết nối, lãnh đạo vì con người.","careers":["Có con người","Mang tính tổ chức nhóm"]},
+    "ENFP":{"short":"Nhiệt huyết, sáng tạo.","long":"ENFP nhiều năng lượng, thích khám phá cơ hội.","careers":["Môi trường năng động","Sáng tạo","Cơ hội khám phá điều mới"]},
+    "ISTJ":{"short":"Trách nhiệm, thực tế.","long":"ISTJ tuân thủ quy tắc, làm việc có cấu trúc.","careers":["Cấu trúc rõ ràng","Ổn định","Quy định chính xác"]},
+    "ISFJ":{"short":"Chu đáo, tận tâm.","long":"ISFJ chăm sóc người khác, chú ý chi tiết.","careers":["Công việc ý nghĩa","Phục vụ cộng đồng","Chi tiết cụ thể"]},
+    "ESTJ":{"short":"Tổ chức, quyết đoán.","long":"ESTJ giỏi tổ chức, thi hành quy trình.","careers":["Hiệu suất cao","Tính kỷ luật","Vai trò rõ ràng"]},
+    "ESFJ":{"short":"Quan tâm cộng đồng.","long":"ESFJ chu đáo, giỏi giao tiếp, hỗ trợ tập thể.","careers":["Mang tính con người","Giao tiếp","Giúp đỡ người khác"]},
+    "ISTP":{"short":"Thực hành, phân tích.","long":"ISTP thích khám phá vận hành của mọi thứ, giải quyết thực tế.","careers":["Cần kỹ năng tay nghề","Phản ứng linh hoạt"]},
+    "ISFP":{"short":"Nghệ sĩ, nhạy cảm.","long":"ISFP sáng tạo, có con mắt thẩm mỹ, sống trong hiện tại.","careers":["Sáng tạo","Tự do biểu đạt bản thân"]},
+    "ESTP":{"short":"Năng động, ưa mạo hiểm.","long":"ESTP hành động nhanh, thích thử thách, xử lý khủng hoảng.","careers":["Nhanh","Nhiều cơ hội thử sức","Có tính cạnh tranh"]},
+    "ESFP":{"short":"Biểu diễn, thân thiện.","long":"ESFP thích giao tiếp, tạo niềm vui cho người khác.","careers":["Vui nhộn","Tương tác liên tục với con người"]}
   };
 
 
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         <h3>Kết quả MBTI của bạn: <strong>${code}</strong></h3>
         <p><strong>Mô tả ngắn:</strong> ${desc.short}</p>
         <p><strong>Mô tả dài:</strong> ${desc.long || 'Không có'}</p>
-        <p><strong>Gợi ý nghề nghiệp:</strong> ${desc.careers && desc.careers.length? desc.careers.join(', '): 'Không có'}</p>
+        <p><strong>Môi trường làm việc:</strong> ${desc.careers && desc.careers.length? desc.careers.join(', '): 'Không có'}</p>
         ${scoreHtml}
         <div style="margin-top:12px;">
           <button id="btnRestart" class="btn-play">Chơi lại</button>
@@ -294,6 +294,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 </script>
 </body>
 </html>
+
 
 
 
